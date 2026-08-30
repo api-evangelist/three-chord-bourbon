@@ -1,0 +1,113 @@
+generated: '2026-08-30'
+method: probed
+source: https://threechordbourbon.com/ and https://store.threechordbourbon.com/
+note: >-
+  No .well-known document is served on either host. Both hosts return a REAL HTTP 404
+  (an HTML error page from WordPress on the apex, and a 404 from the storefront's
+  Next.js/nginx front end), so these are genuine absences and not a single-page-app
+  catch-all answering 200 for everything. Because nothing returned a 200 carrying a
+  document, NO WellKnown and NO SecurityTxt pointer is emitted in apis.yml — this file
+  records an absence, and an absence must not be scored as a presence.
+hit_count: 0
+hosts:
+- host: https://threechordbourbon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://store.threechordbourbon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+x-contract-discovery:
+  note: >-
+    STEP 0b contract discovery, run against both hosts on 2026-08-30. Every REST spec
+    path, the GraphQL path and both agent-card paths missed. No OpenAPI, Swagger,
+    GraphQL SDL, AsyncAPI, MCP server, .proto or WSDL exists for this company.
+  probes:
+  - url: https://threechordbourbon.com/openapi.json
+    status: 404
+  - url: https://threechordbourbon.com/openapi.yaml
+    status: 404
+  - url: https://threechordbourbon.com/swagger.json
+    status: 404
+  - url: https://threechordbourbon.com/v1/openapi.json
+    status: 404
+  - url: https://threechordbourbon.com/api-docs
+    status: 404
+  - url: https://threechordbourbon.com/docs
+    status: 404
+  - url: https://threechordbourbon.com/redoc
+    status: 404
+  - url: https://threechordbourbon.com/graphql
+    status: 404
+  - url: https://threechordbourbon.com/llms.txt
+    status: 404
+  - url: https://threechordbourbon.com/robots.txt
+    status: 200
+  - url: https://store.threechordbourbon.com/openapi.json
+    status: 404
+  - url: https://store.threechordbourbon.com/openapi.yaml
+    status: 404
+  - url: https://store.threechordbourbon.com/swagger.json
+    status: 404
+  - url: https://store.threechordbourbon.com/api-docs
+    status: 404
+  - url: https://store.threechordbourbon.com/docs
+    status: 307
+    note: redirects to /age-verification, the storefront's age gate
+  - url: https://store.threechordbourbon.com/graphql
+    status: 307
+    note: redirects to /age-verification, not a GraphQL endpoint
+  - url: https://store.threechordbourbon.com/llms.txt
+    status: 401
+    note: application/problem+json 401 from the storefront platform, not a document
+  - url: https://store.threechordbourbon.com/robots.txt
+    status: 200
+    note: 'Disallow: /api/ and /health/ — the storefront platform''s internal routes,
+      not a published developer API'
+  - url: https://threechordbourbon.com/wp-json/
+    status: 200
+    note: >-
+      The stock WordPress REST API index that ships with every WordPress install
+      (namespaces oembed/1.0, wp-cloud/v1, akismet/v1, redirection/v1 and similar
+      plugin routes). This is CMS default behaviour, not an API Three Chord Bourbon
+      designed, documented or offers to integrators, so it is recorded here and
+      deliberately NOT registered as an API in apis.yml.

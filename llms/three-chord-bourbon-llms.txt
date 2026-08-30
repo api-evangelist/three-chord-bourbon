@@ -1,0 +1,35 @@
+# Three Chord Bourbon
+
+> Three Chord Bourbon, Inc. is an American whiskey blending house founded in 2017 by Rock & Roll Hall of Fame guitarist, producer and songwriter Neil Giraldo. It blends straight bourbon whiskeys aged a minimum of four years using a process the company calls "Perfectly Tuned Taste," and has extended the line into rye and cask-finished expressions. Product is co-packed at Ugly Dog Distillery in Chelsea, Michigan; the corporate office is in Clarence, New York.
+
+## API surface
+
+Three Chord Bourbon publishes **no public API**. As of 2026-08-30 there is no developer
+portal, no API reference, no OpenAPI/Swagger/GraphQL/AsyncAPI contract, no MCP server,
+no A2A agent card, no SDK on any public package registry, and no `/.well-known/`
+discovery document on either company host. This is a consumer packaged goods company;
+the absence is expected and is not a defect.
+
+The only machine-readable endpoint reachable on the domain is `https://threechordbourbon.com/wp-json/`,
+the stock WordPress REST API index that ships with the CMS. It is not documented, not
+offered to integrators, and is not registered as an API in this profile.
+
+## Company
+
+- [Three Chord Bourbon](https://threechordbourbon.com/): Company website.
+- [About Three Chord Bourbon](https://threechordbourbon.com/about-us/): Company story, founder, and production detail.
+- [Neil's Blog](https://threechordbourbon.com/blog/): Founder's blog.
+- [Contact](https://threechordbourbon.com/contact-us/): Contact form; info@threechordbourbon.com.
+- [Online store](https://store.threechordbourbon.com/): Direct-to-consumer storefront (age-gated).
+
+## Legal
+
+- [Terms & Conditions](https://threechordbourbon.com/terms-conditions/)
+- [Privacy Policy](https://threechordbourbon.com/privacy-policy/)
+- [Code of Responsible Practices](https://threechordbourbon.com/code-of-responsible-practices/)
+
+## API Evangelist profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/three-chord-bourbon/refs/heads/main/apis.yml): This company's APIs.json profile.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/three-chord-bourbon/refs/heads/main/well-known/three-chord-bourbon-well-known.yml): Recorded contract-discovery probe results (all 404).
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/three-chord-bourbon/refs/heads/main/security/three-chord-bourbon-domain-security.yml): Probed TLS/DNS posture.

@@ -1,17 +1,36 @@
 aid: three-chord-bourbon
 name: Three Chord Bourbon
-description: 'Three Chord Bourbon is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Three Chord Bourbon, Inc. is an American whiskey blending house founded
+  in 2017 by Rock & Roll Hall of Fame guitarist, producer and songwriter Neil Giraldo,
+  who serves as founder, creative director and chairman. The company blends straight
+  bourbon whiskeys aged a minimum of four years using a proprietary process it calls
+  "Perfectly Tuned Taste," and has extended the line into rye and cask-finished expressions
+  including a pinot noir cask finish and the Amplify rye. Product is co-packed at Ugly
+  Dog Distillery in Chelsea, Michigan, and the corporate office is in Clarence, New
+  York. The brand sells through wholesale distribution and a direct-to-consumer online
+  store at store.threechordbourbon.com. It is a consumer packaged goods company: it
+  publishes no developer portal, no API documentation, no SDKs and no machine-readable
+  API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/three-chord-bourbon/refs/heads/main/apis.yml
+image: https://threechordbourbon.com/wp-content/uploads/3Chord-record-logo-cream.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-no-api-surface
 specificationVersion: '0.20'
 created: '2026-08-30'
 modified: '2026-08-30'
 tags:
 - Company
+- Consumer Packaged Goods
+- Food and Beverage
+- Alcoholic Beverages
+- Whiskey
+- Bourbon
+- Spirits
+- Retail
+- Ecommerce
+- Direct to Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,46 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/three-chord-bourbon-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://threechordbourbon.com/
+- type: About
+  url: https://threechordbourbon.com/about-us/
+- type: Blog
+  url: https://threechordbourbon.com/blog/
+- type: Support
+  url: https://threechordbourbon.com/contact-us/
+- type: TermsOfService
+  url: https://threechordbourbon.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://threechordbourbon.com/privacy-policy/
+- type: LLMsTxt
+  url: llms/three-chord-bourbon-llms.txt
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Three Chord Bourbon, Inc. is a whiskey blending house selling bottled spirits
+    through distributors and a WooCommerce/age-gated online store; every contract-discovery
+    path returned a real 404 and the only machine-readable endpoint on the domain is
+    the stock WordPress /wp-json/ index that ships with the CMS, not an API the company
+    published.
+  evidence:
+  - url: https://threechordbourbon.com/openapi.json
+    status: 404
+  - url: https://threechordbourbon.com/.well-known/agent-card.json
+    status: 404
+  - url: https://threechordbourbon.com/.well-known/api-catalog
+    status: 404
+  - url: https://store.threechordbourbon.com/openapi.json
+    status: 404
+  - url: https://store.threechordbourbon.com/graphql
+    status: 307
+  - url: https://threechordbourbon.com/wp-json/
+    status: 200
+  checked: '2026-08-30'
