@@ -12,6 +12,18 @@ description: 'Three Chord Bourbon, Inc. is an American whiskey blending house fo
   publishes no developer portal, no API documentation, no SDKs and no machine-readable
   API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/three-chord-bourbon/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://threechordbourbon.com/wp-content/uploads/3Chord-record-logo-cream.svg
 x-type: company
 x-source: harvest:secondary-market
