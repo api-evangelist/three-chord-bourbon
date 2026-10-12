@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/three-chord-bourbon/integrations
+- https://n8n.io/integrations/three-chord-bourbon/
+- https://composio.dev/toolkits/three-chord-bourbon
+- https://monid.ai/tools/three-chord-bourbon
+checked:
+- https://composio.dev/toolkits/three-chord-bourbon
+- https://monid.ai/tools/three-chord-bourbon
+- https://n8n.io/integrations/three-chord-bourbon/
+- https://zapier.com/apps/three-chord-bourbon/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
